@@ -12,9 +12,10 @@ Clone/git pull the repo into any local directory
 $ git clone https://github.com/yurimarx/qr-fhir.git
 ```
 
-Open the terminal in this directory and run:
+Open the terminal in <b>qr-fhir directory</b> and run:
 
 ```
+$ docker-compose build
 $ docker-compose up -d
 ```
 
