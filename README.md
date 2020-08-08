@@ -1,7 +1,5 @@
-# iris-fhirserver-template
-Base template for using InterSystems IRIS for Health Community Edition as a FHIR Server
-
-It setups a FHIR SERVER, imports the test data, demoes REST API usage with a simple web page.
+# qr-fhir
+This app generate QRCode with vcard or personal data about Patient FHIR resource
 
 ## Prerequisites
 Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
@@ -11,7 +9,7 @@ Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installi
 Clone/git pull the repo into any local directory
 
 ```
-$ git clone https://github.com/intersystems-community/iris-fhir-template.git
+$ git clone https://github.com/yurimarx/qr-fhir.git
 ```
 
 Open the terminal in this directory and run:
@@ -23,6 +21,11 @@ $ docker-compose up -d
 ## Patient data
 The template goes with 5 preloaded patents in [/fhirdata](https://github.com/intersystems-community/iris-fhir-server-template/tree/master/fhirdata) folder which are being loaded during [docker build](https://github.com/intersystems-community/iris-fhir-server-template/blob/8bd2932b34468f14530a53d3ab5125f9077696bb/iris.script#L26)
 You can generate more patients with using the [following project](https://github.com/intersystems-community/irisdemo-base-synthea)
+
+## Open UI to generate your QRCodes
+- Open URL http://localhost:9090
+- You should see a react web application that allows select a patient and get QRCode
+- Use your cellphone QRCode app to test generated QRCode
 
 ## Testing FHIR R4 API
 
