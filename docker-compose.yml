@@ -12,3 +12,25 @@ services:
     volumes:
       - ~/iris.key:/usr/irissys/mgr/iris.key
       - ./:/irisdev/app
+    networks:
+      - backend
+  # Frontend Service 
+  app-client:
+    build:
+      context: qr-fhir-frontend # Use an image built from the specified dockerfile in the `qr-fhir-frontend` directory.
+      dockerfile: Dockerfile
+      args:
+        REACT_APP_API_BASE_URL: http://127.0.0.1:8080/api
+    ports:
+      - "9090:80" # Map the exposed port 80 on the container to port 9090 on the host machine
+    restart: always
+    depends_on:
+      - iris
+    networks:
+      - backend
+      - frontend  
+
+# Networks to be created to facilitate communication between containers
+networks:
+  backend:
+  frontend:
