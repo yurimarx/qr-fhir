@@ -26,6 +26,7 @@ You can generate more patients with using the [following project](https://github
 ## Open UI to generate your QRCodes
 - Open URL http://localhost:9090
 - You should see a react web application that allows select a patient and get QRCode
+<img width="881" src="https://raw.githubusercontent.com/yurimarx/qr-fhir/master/qr-fhir-frontend/public/assets/layout/printapp.png">
 - Use your cellphone QRCode app to test generated QRCode
 
 ## Testing FHIR R4 API
